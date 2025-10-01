@@ -1,0 +1,19 @@
+FROM node:20
+
+# Install PHP CLI and required extensions
+RUN apt-get update && apt-get install -y \
+    php-cli \
+    php-curl \
+    php-json \
+    php-mbstring \
+    php-xml \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Install global npm packages if needed
+# RUN npm install -g @vitejs/cli
+
+# Expose the port Vite uses
+EXPOSE 5173
