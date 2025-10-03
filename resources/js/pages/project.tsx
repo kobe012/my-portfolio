@@ -5,9 +5,9 @@ export default function Project() {
     const widths = ["w-1/4", "w-1/2", "w-1/4"]
 
 
-    const projects = [["2025-04-12", "Portfolio Site", "React, Tailwind, Typescript", "https://github.com/username/portfolio"],
-    ["2025-09-12", "Game", "Love, Lua"],
-    ["2025-09-12", "Thesis", "Laravel, Vue, Mysql"]
+    const projects = [["2025-04-12", "Portfolio Site", "React, Tailwind, Typescript", "https://github.com/kobe012/my-portfolio"],
+    ["2025-09-12", "Game", "Love, Lua", "https://github.com/kobe012/GameProject"],
+    ["2025-09-12", "Thesis (Barangay Website)", "Laravel, Vue, Mysql", "https://github.com/kobe012/BrgySanJose"]
     ]
 
     return (
@@ -32,6 +32,8 @@ export default function Project() {
                     <span className={widths[0]}>{projects[0]}</span>
                     {/* project name */}
                     <a href={projects[3]}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`${widths[1]} text-shadow-teal-50 hover:underline hover:text-lg  duration-250 cursor-pointer`}>
                         {projects[1]}
                     </a>
