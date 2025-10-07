@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
     backend:
-        image: bitnami/laravel:11
+        build:
+            context: .
+            dockerfile: Dockerfile.backend
         container_name: backend
         environment:
             - DB_CONNECTION=mysql
@@ -17,12 +19,6 @@ services:
             - "8000:8000"
         depends_on:
             - mysql
-        command:
-            [
-                "sh",
-                "-c",
-                "[ -d vendor ] || composer install && php artisan serve --host=0.0.0.0 --port=8000",
-            ]
 
     frontend:
         build:
