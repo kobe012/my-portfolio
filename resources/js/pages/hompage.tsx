@@ -2,7 +2,7 @@
 
 export default function HomePage() {
     return (
-        <></>
+        <div className="bg-black min-h-screen"></div>
 
     )
     //     const [command, setCommand] = useState("");
