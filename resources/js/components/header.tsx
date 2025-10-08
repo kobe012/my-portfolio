@@ -4,11 +4,10 @@ export default function Header() {
         { label: "[1] My Project", href: "/projects" },
         { label: "[2] About", href: "/about" },
         { label: "[3] Email", href: "/email" },
-        { label: "[4] Contact", href: "/contact" },
     ]
     return (
 
-        <div className="bg-[#303743] flex flex-col justify-start items-start gap-4">
+        <div className="bg-[#96A78D] flex flex-col justify-start items-start gap-4">
             {/* Top Section */}
             <div className="self-stretch inline-flex justify-between items-start">
                 {/* Logo + Info */}
@@ -28,22 +27,22 @@ export default function Header() {
                     <div className="inline-flex flex-col justify-start items-start gap-1">
                         <div className="self-stretch inline-flex justify-start items-center gap-2">
                             <div className="w-24 text-white text-sm font-semibold">Name</div>
-                            <div className="text-neutral-400 text-sm font-semibold">Vince Kobe San Juan</div>
+                            <div className="text-[#F0F0F0] text-sm font-semibold">Vince Kobe San Juan</div>
                         </div>
 
                         <div className="self-stretch inline-flex justify-start items-center gap-2">
                             <div className="w-24 text-white text-sm font-semibold">Location</div>
-                            <div className="text-neutral-400 text-sm font-semibold">Cavite, Philippines</div>
+                            <div className="text-[#F0F0F0] text-sm font-semibold">Cavite, Philippines</div>
                         </div>
 
                         <div className="self-stretch inline-flex justify-start items-center gap-2">
                             <div className="w-24 text-white text-sm font-semibold">Email</div>
-                            <div className="text-neutral-400 text-sm font-semibold">vksanjuannn@gmail.com</div>
+                            <div className="text-[#F0F0F0] text-sm font-semibold">vksanjuannn@gmail.com</div>
                         </div>
 
                         <div className="self-stretch inline-flex justify-start items-center gap-2">
                             <div className="w-24 text-white text-sm font-semibold">Editor</div>
-                            <div className="text-neutral-400 text-sm font-semibold">Neovim btw</div>
+                            <div className="text-[#F0F0F0] text-sm font-semibold">Neovim btw</div>
                         </div>
                     </div>
                 </div>
@@ -72,10 +71,10 @@ export default function Header() {
 
             {/* Navigation */}
             <div className="flex gap-4 font-bold">
-                {volumes.map((volumes, index) => (
-                    <div key={index}
-                        className="font-bold hover:underline hover:text-lg shaodw-lg duration-75">
-                        <a href={volumes.href}>{volumes.label}</a>
+                {volumes.map((item, i) => (
+                    <div key={i}
+                        className=" text-white font-bold hover:underline hover:text-lg shadow-lg duration-150">
+                        <a href={item.href}>{item.label}</a>
                     </div>
 
 

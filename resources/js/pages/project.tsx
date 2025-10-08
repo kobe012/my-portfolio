@@ -15,8 +15,8 @@ export default function Project() {
         <>
             <Header />
             {/* header for my Date projecty contacnt me etc */}
-            <div className="w-full bg-white select-none">
-                <div className=" flex font-bold border-b p-5 text-black">
+            <div className="w-full bg-[#B6CEB4] text-[#F0F0F0] select-none">
+                <div className=" flex font-bold border-b p-5 text-[#F0F0F0]">
                     {headers.map((headers, i) => (
                         <span key={i} className={widths[i]}>
                             {headers}
@@ -24,26 +24,29 @@ export default function Project() {
 
                     ))}
                 </div>
+            </div >
+
+            <div className="bg-[#B6CEB4] min-h-screen">
+                {volumes.map((items, index) => (
+
+                    <div key={index} className="bg-[#B6CEB4] text-[#F0F0F0] flex border-b p-2 items-center select-none">
+
+                        {/* project date */}
+                        <span className={widths[0]}>{items.date}</span>
+                        {/* project name */}
+                        <a href={items.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${widths[1]} text-shadow-teal-50 hover:underline hover:text-lg hover:text-white duration-250 cursor-pointer`}>
+                            {items.name}
+                        </a>
+                        {/* Technology */}
+                        <span className={widths[0]}>{items.tech}</span>
+
+                    </div>
+
+                ))}
             </div>
-            {volumes.map((items, index) => (
-
-                <div key={index} className="flex border-b p-2 items-center select-none">
-
-                    {/* project date */}
-                    <span className={widths[0]}>{items.date}</span>
-                    {/* project name */}
-                    <a href={items.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${widths[1]} text-shadow-teal-50 hover:underline hover:text-lg  duration-250 cursor-pointer`}>
-                        {items.name}
-                    </a>
-                    {/* Technology */}
-                    <span className={widths[0]}>{items.tech}</span>
-
-                </div>
-
-            ))}
         </>
 
     )

@@ -3,6 +3,8 @@ import Header from "@/components/header";
 
 export default function About() {
 
+    const hovertext = "text-gray-400 hover:text-gray-300 duration-300 cursor-pointer"
+
     const volumes = [
         { label: "Facebook:", name: "@Kobe", href: "https://facebook.com", comment: "I post rarely" },
         { label: "Instagram:", name: "@vkssanjuann", href: "https://instagram.com", comment: "Mostly stories" },
@@ -28,7 +30,7 @@ export default function About() {
                             <a
                                 href={item.href}
                                 target="_blank"
-                                className="text-gray-400 hover:text-white duration-300 cursor-pointer"
+                                className={hovertext}
                                 part="_blank"
                             >
                                 {item.name}
